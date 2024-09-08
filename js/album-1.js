@@ -28,7 +28,7 @@ const musicData = [
   },
   {
     backgroundImage: "https://pages.souls-music.com/images/poster-4.jpg",
-    posterUrl: "./images/poster-4.jpg",
+    posterUrl: "https://pages.souls-music.com/images/poster-4.jpg",
     title: "From Where We Started",
     album: "No Spirit",
     year: 2022,
