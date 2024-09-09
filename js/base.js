@@ -15,7 +15,9 @@ const addEventOnElements = function (elements, eventType, callback) {
   /**
    * PLAYLIST
    *
-   * add all music in playlist, from 'musicData' <span class="material-symbols-rounded">equalizer</span>
+   * add all music in playlist, from 'musicData'
+   * <span class="material-symbols-rounded">equalizer</span>
+   * <img src="https://pages.souls-music.com/images/icons8-audio-wave.gif">
    */
 
   const playlist = document.querySelector("[data-music-list]");
@@ -28,7 +30,7 @@ const addEventOnElements = function (elements, eventType, callback) {
 		  class="img-cover">
 
 		<div class="item-icon">
-		  <img src="https://pages.souls-music.com/images/icons8-audio-wave.gif">
+		  <span class="material-symbols-rounded">equalizer</span>
 		</div>
 	  </button>
 	</li>
