@@ -151,38 +151,10 @@ const addEventOnElements = function (elements, eventType, callback) {
 	if (audioSource.paused) {
 	  audioSource.play();
 	  playBtn.classList.add("active");
-	  for (let i = 0, len = musicData.length; i < len; i++) {
-		playlist.innerHTML += `
-		<li>
-		  <button class="music-item ${i === 0 ? "playing" : ""}" data-playlist-toggler data-playlist-item="${i}">
-			<img src="${musicData[i].posterUrl}" width="800" height="800" alt="${musicData[i].title} Album Poster"
-			  class="img-cover">
-	
-			<div class="item-icon">
-			  <img src="https://pages.souls-music.com/images/icons8-audio-wave.gif">
-			</div>
-		  </button>
-		</li>
-		`;
-	  }
 	  playInterval = setInterval(updateRunningTime, 500);
 	} else {
 	  audioSource.pause();
 	  playBtn.classList.remove("active");
-	  for (let i = 0, len = musicData.length; i < len; i++) {
-		playlist.innerHTML += `
-		<li>
-		  <button class="music-item ${i === 0 ? "playing" : ""}" data-playlist-toggler data-playlist-item="${i}">
-			<img src="${musicData[i].posterUrl}" width="800" height="800" alt="${musicData[i].title} Album Poster"
-			  class="img-cover">
-	
-			<div class="item-icon">
-			  <span class="material-symbols-rounded">equalizer</span>
-			</div>
-		  </button>
-		</li>
-		`;
-	  }
 	  clearInterval(playInterval);
 	}
   }
