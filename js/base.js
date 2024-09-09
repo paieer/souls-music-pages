@@ -28,7 +28,7 @@ const addEventOnElements = function (elements, eventType, callback) {
 		  class="img-cover">
 
 		<div class="item-icon">
-		  <img src="https://pages.souls-music.com/images/icons8-audio-wave.gif">
+		  <img style="filter:chroma(color=#ffffff)" src="https://pages.souls-music.com/images/icons8-audio-wave.gif">
 		</div>
 	  </button>
 	</li>
