@@ -148,19 +148,28 @@ const addEventOnElements = function (elements, eventType, callback) {
   let playInterval;
 
   const playMusic = function () {
-	if (audioSource.paused) {
-	  audioSource.play();
-	  playBtn.classList.add("active");
-	  playInterval = setInterval(updateRunningTime, 500);
-	} else {
-	  audioSource.pause();
-	  playBtn.classList.remove("active");
-	  clearInterval(playInterval);
-	}
+	// if (audioSource.paused) {
+	//   audioSource.play();
+	//   playBtn.classList.add("active");
+	//   playInterval = setInterval(updateRunningTime, 500);
+	// } else {
+	//   audioSource.pause();
+	//   playBtn.classList.remove("active");
+	//   clearInterval(playInterval);
+	// }
+	ap.toggle();
   }
 
   playBtn.addEventListener("click", playMusic);
-
+  ap.on('pause', function () {
+	console.log('player pause');
+	playBtn.classList.remove("active");
+    
+  });
+  ap.on('playing', function () {
+    	console.log('player playing');
+	playBtn.classList.add("active");
+  });
 
   /** update running time while playing music */
 
