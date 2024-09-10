@@ -148,15 +148,6 @@ const addEventOnElements = function (elements, eventType, callback) {
   let playInterval;
 
   const playMusic = function () {
-	// if (audioSource.paused) {
-	//   audioSource.play();
-	//   playBtn.classList.add("active");
-	//   playInterval = setInterval(updateRunningTime, 500);
-	// } else {
-	//   audioSource.pause();
-	//   playBtn.classList.remove("active");
-	//   clearInterval(playInterval);
-	// }
 	ap.toggle();
   }
 
@@ -245,12 +236,12 @@ const addEventOnElements = function (elements, eventType, callback) {
   const skipNext = function () {
 	lastPlayedMusic = currentMusic;
 
-	if (isShuffled) {
-	  shuffleMusic();
-	} else {
-	  currentMusic >= musicData.length - 1 ? currentMusic = 0 : currentMusic++;
-	}
-
+	// if (isShuffled) {
+	//   shuffleMusic();
+	// } else {
+	//   currentMusic >= musicData.length - 1 ? currentMusic = 0 : currentMusic++;
+	// }
+	ap.skipForward()
 	changePlayerInfo();
 	changePlaylistItem();
   }
@@ -268,12 +259,12 @@ const addEventOnElements = function (elements, eventType, callback) {
   const skipPrev = function () {
 	lastPlayedMusic = currentMusic;
 
-	if (isShuffled) {
-	  shuffleMusic();
-	} else {
-	  currentMusic <= 0 ? currentMusic = musicData.length - 1 : currentMusic--;
-	}
-
+	// if (isShuffled) {
+	//   shuffleMusic();
+	// } else {
+	//   currentMusic <= 0 ? currentMusic = musicData.length - 1 : currentMusic--;
+	// }
+	ap.skipBack();
 	changePlayerInfo();
 	changePlaylistItem();
   }
@@ -295,8 +286,11 @@ const addEventOnElements = function (elements, eventType, callback) {
   let isShuffled = false;
 
   const shuffle = function () {
-	playerShuffleBtn.classList.toggle("active");
-
+	if (isShuffled){
+		playerShuffleBtn.classList.remove("active");
+	} else {
+		playerShuffleBtn.classList.toggle("active");
+	}
 	isShuffled = isShuffled ? false : true;
   }
 
