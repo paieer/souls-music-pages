@@ -4,7 +4,7 @@ const musicData = [
   {
     backgroundImage: "https://pages.souls-music.com/images/poster-1.jpg",
     posterUrl: "https://pages.souls-music.com/images/poster-1.jpg",
-    title: "一千零一夜",
+    title: "",
     album: "最伟大的著作[第一章]",
     year: 2024,
     artist: "Soul's Whisper",
@@ -12,7 +12,7 @@ const musicData = [
   {
     backgroundImage: "https://pages.souls-music.com/images/poster-2.jpg",
     posterUrl: "https://pages.souls-music.com/images/poster-2.jpg",
-    title: "傲慢与偏见",
+    title: "",
     album: "Soul's Whisper",
     year: 2024,
     artist: "最伟大的著作[第二章]",
