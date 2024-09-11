@@ -17,6 +17,14 @@ const musicData = [
     year: 2024,
     artist: "最伟大的著作[第二章]",
   },
+  {
+    backgroundImage: "https://pages.souls-music.com/images/poster-3.jpg",
+    posterUrl: "https://pages.souls-music.com/images/poster-3.jpg",
+    title: "",
+    album: "Soul's Whisper",
+    year: 2024,
+    artist: "最伟大的著作[第三章]",
+  },
 ];
 
 /**
@@ -119,13 +127,11 @@ const loadAplayerMusic = function () {
 			ap.list.add([
 				{
 					name: '半岛铁盒',
-					author: '周杰伦',
 					url: 'https://echeverra.cn/wp-content/uploads/2022/05/周杰伦-半岛铁盒.mp3',
 					pic: 'https://echeverra.cn/wp-content/uploads/2022/05/周杰伦-半岛铁盒-mp3-image.png'
 				},
 				{
 					name: '给我一首歌的时间',
-					author: '周杰伦',
 					url: 'https://echeverra.cn/wp-content/uploads/2021/06/周杰伦-给我一首歌的时间.mp3',
 					pic: 'https://echeverra.cn/wp-content/uploads/2021/06/周杰伦-给我一首歌的时间-mp3-image.png'
 				}
@@ -135,13 +141,11 @@ const loadAplayerMusic = function () {
 			ap.list.add([
 				{
 					name: '时间1',
-					author: "Soul's whisper",
 					url: 'https://r2.souls-music.com/music/music-1.mp3',
 					pic: 'https://pages.souls-music.com/images/poster-1.jpg'
 				},
 				{
 					name: '时间2',
-					author: "Soul's whisper",
 					url: 'https://r2.souls-music.com/music/music-2.mp3',
 					pic: 'https://pages.souls-music.com/images/poster-2.jpg'
 				}
@@ -151,13 +155,11 @@ const loadAplayerMusic = function () {
 			ap.list.add([
 				{
 					name: '时间3',
-					author: "Soul's whisper",
 					url: 'https://r2.souls-music.com/music/music-3.mp3',
 					pic: 'https://pages.souls-music.com/images/poster-3.jpg'
 				},
 				{
 					name: '时间4',
-					author: "Soul's whisper",
 					url: 'https://r2.souls-music.com/music/music-4.mp3',
 					pic: 'https://pages.souls-music.com/images/poster-4.jpg'
 				}
