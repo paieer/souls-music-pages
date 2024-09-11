@@ -113,6 +113,7 @@ playlistItems[currentMusic].classList.add("playing");
 }
 
 const loadAplayerMusic = function () {
+	ap.list.clear();
 	switch (currentMusic+1) {
 		case 1:
 			ap.list.add([
@@ -147,7 +148,6 @@ lastPlayedMusic = currentMusic;
 currentMusic = Number(this.dataset.playlistItem);
 changePlaylistItem();
 // 加载专辑到 aplayer
-ap.list.clear();
 loadAplayerMusic();
 });
 loadAplayerMusic();
