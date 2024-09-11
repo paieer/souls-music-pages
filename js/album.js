@@ -6,7 +6,6 @@ const musicData = [
     album: "No Spirit",
     year: 2022,
     artist: "No Spirit x Tonion",
-    musicPath: "https://r2.souls-music.com/music/music-1.mp3",
   },
   {
     backgroundImage: "https://pages.souls-music.com/images/poster-2.jpg",
@@ -15,7 +14,6 @@ const musicData = [
     album: "No Spirit",
     year: 2022,
     artist: "No Spirit x Jhove",
-    musicPath: "https://r2.souls-music.com/music/music-2.mp3",
   },
   {
     backgroundImage: "https://pages.souls-music.com/images/poster-3.jpg",
@@ -24,7 +22,6 @@ const musicData = [
     album: "No Spirit",
     year: 2022,
     artist: "No Spirit x  juniorodeo",
-    musicPath: "https://r2.souls-music.com/music/music-3.mp3",
   },
   {
     backgroundImage: "https://pages.souls-music.com/images/poster-4.jpg",
@@ -33,7 +30,6 @@ const musicData = [
     album: "No Spirit",
     year: 2022,
     artist: "No Spirit",
-    musicPath: "https://r2.souls-music.com/music/music-4.mp3",
   },
   {
     backgroundImage: "https://pages.souls-music.com/images/poster-5.jpg",
@@ -42,6 +38,5 @@ const musicData = [
     album: "No Spirit",
     year: 2022,
     artist: "No Spirit",
-    musicPath: "https://r2.souls-music.com/music/music-5.mp3",
   },
 ];
