@@ -160,7 +160,7 @@ loadAplayerMusic();
  */
 
 const playerBanner = document.querySelector("[data-player-banner]");
-const playerTitle = document.querySelector("[data-title]");
+// const playerTitle = document.querySelector("[data-title]");
 const playerAlbum = document.querySelector("[data-album]");
 const playerYear = document.querySelector("[data-year]");
 const playerArtist = document.querySelector("[data-artist]");
@@ -170,7 +170,7 @@ const changePlayerInfo = function () {
 playerBanner.src = musicData[currentMusic].posterUrl;
 playerBanner.setAttribute("alt", `${musicData[currentMusic].title} Album Poster`);
 document.body.style.backgroundImage = `url(${musicData[currentMusic].backgroundImage})`;
-playerTitle.textContent = musicData[currentMusic].title;
+// playerTitle.textContent = musicData[currentMusic].title;
 playerAlbum.textContent = musicData[currentMusic].album;
 playerYear.textContent = musicData[currentMusic].year;
 playerArtist.textContent = musicData[currentMusic].artist;
