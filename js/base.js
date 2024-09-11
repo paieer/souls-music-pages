@@ -104,6 +104,7 @@ addEventOnElements(playlistTogglers, "click", togglePlaylist);
 
 const playlistItems = document.querySelectorAll("[data-playlist-item]");
 
+let firstLoad = true;
 let currentMusic = num_item - 1;
 let lastPlayedMusic = num_item - 1;
 
@@ -130,6 +131,7 @@ const loadAplayerMusic = function () {
 					pic: 'https://echeverra.cn/wp-content/uploads/2021/06/周杰伦-给我一首歌的时间-mp3-image.png'
 				}
 			]);
+			
 			break;
 		case 2:
 			ap.list.add([
@@ -148,7 +150,11 @@ const loadAplayerMusic = function () {
 			]);
 			break;
 	}
-
+	if (firstLoad) {
+		firstLoad = false;
+	} else {
+		ap.play();
+	}
 }
 
 addEventOnElements(playlistItems, "click", function () {
