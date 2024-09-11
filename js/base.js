@@ -133,8 +133,14 @@ const loadAplayerMusic = function () {
 		case 2:
 			ap.list.add([
 				{
-					name: '时间',
-					author: 'Soul\'s whisper',
+					name: '时间1',
+					author: "Soul's whisper",
+					url: 'https://r2.souls-music.com/music/music-1.mp3',
+					pic: 'https://pages.souls-music.com/images/poster-2.jpg'
+				},
+				{
+					name: '时间2',
+					author: "Soul's whisper",
 					url: 'https://r2.souls-music.com/music/music-2.mp3',
 					pic: 'https://pages.souls-music.com/images/poster-2.jpg'
 				}
