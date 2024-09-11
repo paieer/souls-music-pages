@@ -24,7 +24,7 @@ const musicData = [
  */
 
 const ap = new APlayer({
-	container: document.getElementById('aplayer1'),
+	container: document.getElementById('aplayer'),
 	fixed: false,
 	listFolded: true,
 	mutex: true,
@@ -55,12 +55,12 @@ const playlist = document.querySelector("[data-music-list]");
 
 const current_page_url = window.location.href;
 var index = current_page_url.lastIndexOf("\/");
-const num_item = current_page_url.substring(index + 1, current_page_url.length) - 1;
+const num_item = current_page_url.substring(index + 1, current_page_url.length);
 
 for (let i = 0, len = musicData.length; i < len; i++) {
 playlist.innerHTML += `
 <li>
-	<button class="music-item ${i === num_item ? "playing" : ""}" data-playlist-toggler data-playlist-item="${i}">
+	<button class="music-item ${i === (num_item - 1) ? "playing" : ""}" data-playlist-toggler data-playlist-item="${i}">
 	<img src="${musicData[i].posterUrl}" width="800" height="800" alt="${musicData[i].title} Album Poster"
 		class="img-cover">
 
@@ -104,8 +104,8 @@ addEventOnElements(playlistTogglers, "click", togglePlaylist);
 
 const playlistItems = document.querySelectorAll("[data-playlist-item]");
 
-let currentMusic = num_item;
-let lastPlayedMusic = num_item;
+let currentMusic = 0;
+let lastPlayedMusic = 0;
 
 const changePlaylistItem = function () {
 playlistItems[lastPlayedMusic].classList.remove("playing");
@@ -114,7 +114,7 @@ playlistItems[currentMusic].classList.add("playing");
 
 const loadAplayerMusic = function () {
 	ap.list.clear();
-	switch (currentMusic+1) {
+	switch (currentMusic + 1) {
 		case 1:
 			ap.list.add([
 				{
@@ -130,13 +130,14 @@ const loadAplayerMusic = function () {
 					pic: 'https://echeverra.cn/wp-content/uploads/2021/06/周杰伦-给我一首歌的时间-mp3-image.png'
 				}
 			]);
+			break;
 		case 2:
 			ap.list.add([
 				{
 					name: '时间1',
 					author: "Soul's whisper",
 					url: 'https://r2.souls-music.com/music/music-1.mp3',
-					pic: 'https://pages.souls-music.com/images/poster-2.jpg'
+					pic: 'https://pages.souls-music.com/images/poster-1.jpg'
 				},
 				{
 					name: '时间2',
@@ -145,16 +146,32 @@ const loadAplayerMusic = function () {
 					pic: 'https://pages.souls-music.com/images/poster-2.jpg'
 				}
 			]);
+			break;
+		case 3:
+			ap.list.add([
+				{
+					name: '时间3',
+					author: "Soul's whisper",
+					url: 'https://r2.souls-music.com/music/music-3.mp3',
+					pic: 'https://pages.souls-music.com/images/poster-3.jpg'
+				},
+				{
+					name: '时间4',
+					author: "Soul's whisper",
+					url: 'https://r2.souls-music.com/music/music-4.mp3',
+					pic: 'https://pages.souls-music.com/images/poster-4.jpg'
+				}
+			]);
+			break;
 	}
 
 }
 
 addEventOnElements(playlistItems, "click", function () {
-lastPlayedMusic = currentMusic;
-currentMusic = Number(this.dataset.playlistItem);
-changePlaylistItem();
-// 加载专辑到 aplayer
-loadAplayerMusic();
+	lastPlayedMusic = currentMusic;
+	currentMusic = Number(this.dataset.playlistItem);
+	loadAplayerMusic();
+	changePlaylistItem();
 });
 loadAplayerMusic();
 
