@@ -3,7 +3,7 @@
 \*-----------------------------------*/
 
 /**
- * copyright 2022 codewithsadee
+ * copyright 2024
  */
 
 
@@ -110,9 +110,10 @@
 
   li { list-style: none; }
 
-  a,
+  /* a,
+   span,
+   */
   img,
-  span,
   input,
   button { display: block; }
 
@@ -147,7 +148,7 @@
 	line-height: 1.5;
 	min-height: 100vh;
 	min-width: 250px;
-	background-image: url("../images/poster-1.jpg");
+	background-image: url("https://pages.souls-music.com/images/poster-1.jpg");
 	background-size: 150%;
 	background-repeat: no-repeat;
 	background-position: top;
@@ -680,4 +681,31 @@
 
 	.music-list { gap: 28px; }
 
+  }
+
+  /* 背景色 */
+  .aplayer {
+	background: rgba(255, 255, 255, 0.65) !important;
+	position: relative;
+  }
+
+  .aplayer.aplayer-fixed .aplayer-lrc:after,
+  .aplayer.aplayer-fixed .aplayer-lrc:before {
+	display: none;
+  }
+
+  /* 选中与播放中歌曲激活颜色 */
+.aplayer .aplayer-list ol li:hover {
+	background: var(--theme-color) !important;
+  }
+
+  .aplayer .aplayer-list ol li.aplayer-list-light {
+	background: var(--theme-color) !important;
+  }
+
+  /* 歌词 */
+  .aplayer-lrc p {
+	color: #ffffff !important;
+	text-shadow: #000000 1px 0 0, #000000 0 1px 0, #000000 -1px 0 0, #000000
+		0 -1px 0 !important;
   }
