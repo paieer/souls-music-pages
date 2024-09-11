@@ -104,8 +104,8 @@ addEventOnElements(playlistTogglers, "click", togglePlaylist);
 
 const playlistItems = document.querySelectorAll("[data-playlist-item]");
 
-let currentMusic = 0;
-let lastPlayedMusic = 0;
+let currentMusic = num_item - 1;
+let lastPlayedMusic = num_item - 1;
 
 const changePlaylistItem = function () {
 playlistItems[lastPlayedMusic].classList.remove("playing");
