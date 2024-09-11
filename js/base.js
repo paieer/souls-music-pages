@@ -153,7 +153,7 @@ const loadAplayerMusic = function () {
 	if (firstLoad) {
 		firstLoad = false;
 	} else {
-		ap.play();
+		ap.toggle();
 	}
 }
 
